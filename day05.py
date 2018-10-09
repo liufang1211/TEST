@@ -1,3 +1,4 @@
+'''
 class aa:
     def __init__(self):
         self.a=eval(raw_input('Enter a number:'))
@@ -17,5 +18,22 @@ if __name__=='__main__':
     AA=aa()
     AA.fuc1()
     AA.fuc2()
+'''
+'''
+class Rectangle:
+    def __init__(self,width,height):
+        self.width = width
+        self.height = height
+
+    def getArea(self):
+        area = self.width * self.height
+        print area
+    def getPerimeter(self):
+        perimeter = (self.width + self.height) * 2
+        print perimeter
+Rectangle(4,40).getArea()
+Rectangle(4,40).getPerimeter()
+'''
+
 
 
