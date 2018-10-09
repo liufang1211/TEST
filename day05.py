@@ -6,7 +6,16 @@ class aa:
             print('The number is a oushu')
         else :
             print('THe number is a jishu')
-#    def fuc1(self):
+    def fuc1(self):
+        self.a=self.a ** 2
+        print self.a
+    def fuc2(self):
+        self.a=self.a ** 3
+        print self.a
 if __name__=='__main__':
-    aa().fuc()
+    #aa().fuc()
+    AA=aa()
+    AA.fuc1()
+    AA.fuc2()
+
 
