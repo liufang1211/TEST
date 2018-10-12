@@ -31,10 +31,14 @@ class Account:
         mon = self.__balance * self.__annual_rate/100/12.0
         return mon
     def withdraw(self,money):
+        if money<self.__balance:
+            print ('{}'.format(money))
+        else:
+            print('no money')
         self.__balance=self.__balance-money
         return self.__balance
-    def depodit(self,money1):
-        self.__balance=self.__balance+money1
+    def depodit(self,money):
+        self.__balance=self.__balance+money
         return self.__balance
     def amount(self):
         ph.getMon_rate()
@@ -104,14 +108,13 @@ class LinearEquation:
         self.__d=d
         self.__e=e
         self.__f=f
+        if self.__a*self.__d-self.__b*self.__c==0:
+            print('no')
+            exit(0)   #wu bao cuo jie shu dang qian dai ma
     def get(self):
         print self.__a,self.__b,self.__c,self.__d,self.__e,self.__f
     def isSolvable(self):
-        m=self.__a * self.__d-self.__b * self.__c
-        if m!=0:
-            print 'True'
-        elif m==0:
-            print 'False'
+        print ('[+] True')
     def getX(self):
         x=(self.__e*self.__d-self.__b*self.__f)/(self.__a*self.__d-self.__b*self.__c)
         print x
@@ -123,23 +126,28 @@ LinearEquation(a,b,c,d,e,f).get()
 LinearEquation(a,b,c,d,e,f).isSolvable()
 LinearEquation(a,b,c,d,e,f).getX()
 LinearEquation(a,b,c,d,e,f).getY()
-'''
 
+'''
 #E6
 class LinearEquation:
-    def __init__(self,a,b,c,d,e,f):
-        self.__a=a
-        self.__b=b
-        self.__c=c
-        self.__d=d
-        self.__e=e
-        self.__f=f
+    def __init__(self,x1,y1,x2,y2x3,y3,x4,y4):
+        self.__x1=x1
+        self.__y1=y1
+        self.__x2=y2
+        self.__y2=y2
+    def result(self):
+        k1=(x1-x2)/(y1-y2)
+        k2=(x3-x4)/(y3-y4)
+        if k1==k2:
+            print('no')
+        else:
+            x=
     def get(self):
-        print self.__a,self.__b,self.__c,self.__d,self.__e,self.__f
+        print self.__x1,self.__x2,self.__y1,self.__y2
     def isSolvable(self):
         m=self.__a * self.__d-self.__b * self.__c
         if m!=0:
             print 'True'
         elif m==0:
-            print 'False'444..0.00
-    def getX(self):                                                                                                                                             
+            print 'False'
+    def getX(self):     
